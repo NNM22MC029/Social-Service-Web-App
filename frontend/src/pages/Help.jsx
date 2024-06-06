@@ -21,12 +21,11 @@ import { Box } from '@chakra-ui/react';
     <div   className='children'>
         <h1 className='heading'>HELP FOR CHILDREN:</h1>
         <p className='bluePara'>
-        UKRAINIAN CHILDREN ARE SUFFERING FROM THE AGGRESSION OF THE RUSSIAN FEDERATION AND NEED YOUR FINANCIAL SUPPORT TODAY.
-        </p>
+        Supporting the future leaders of tomorrow, our 'Help for Children' initiative aims to provide essential resources and care for vulnerable youth across India. Together, we strive to create brighter tomorrows by ensuring every child receives the love, support, and opportunities they deserve.        </p>
         <Box bgImage={background}  backgroundRepeat={"repeat-x"} className='helpContainer'>
           <img  src={girl} alt="" />
           <div >
-            <h1>UKRAINIAN CHILDREN NEED FUNDS FOR:</h1>
+            <h1>INDIAN CHILDREN NEED FUNDS FOR:</h1>
             <div className='childFunds'>
               <FaStarOfLife/> 
               <p>Medicines</p>
@@ -50,7 +49,7 @@ import { Box } from '@chakra-ui/react';
           </div>
         </Box>
     </div>
-    <div style={{marginTop:"50px"}}>
+    {/* <div style={{marginTop:"50px"}}>
       <h1 className='basisH'>DO YOU WANT TO HELP ON</h1>
       <h1 className='basisH'>A PERMANENT BASIS?</h1>
       <div className='appLink'>
@@ -60,7 +59,7 @@ import { Box } from '@chakra-ui/react';
           <img src={appstore} alt="" />
         </div>
       </div>
-    </div>
+    </div> */}
     
     </DIV>
   )

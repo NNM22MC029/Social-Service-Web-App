@@ -42,19 +42,19 @@ adminRouter.post("/login", async (req, res) => {
   }
 });
 
-adminRouter.get("/logout", async (req, res) => {
-  const token = req.headers.authorization.split(" ")[1];
-  if (!token) {
-    res.status(400).send("Login First!");
-  }
-  const { email, password } = req.body;
-  try {
-    const blackListAdmin = await adminBlackListModel.create({ token });
-    res.status(200).send("Admin Logged Out");
-  } catch (error) {
-    res.status(400).send({ errmsg: error.message });
-  }
-});
+// adminRouter.get("/logout", async (req, res) => {
+//   const token = req.headers.authorization.split(" ")[1];
+//   if (!token) {
+//     res.status(400).send("Login First!");
+//   }
+//   const { email, password } = req.body;
+//   try {
+//     const blackListAdmin = await adminBlackListModel.create({ token });
+//     res.status(200).send("Admin Logged Out");
+//   } catch (error) {
+//     res.status(400).send({ errmsg: error.message });
+//   }
+// });
 
 
 

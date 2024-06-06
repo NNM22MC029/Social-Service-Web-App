@@ -43,7 +43,7 @@ const Dashboard = () => {
   const [totalamount, setTotalamount] = useState(0);
   const [todayDonation, setTodayDonation] = useState(0);
   const [studyDonation,setStudyDonation] = useState(0)
-  const [ukrainedonation,setUkrainedonation] = useState(0)
+  const [Ukrainedonation,setUkrainedonation] = useState(0)
   const [donors, setDonors] = useState(0);
   
  
@@ -56,7 +56,7 @@ const Dashboard = () => {
     let price = 0;
     let totalTodayDonation = 0;
     let totalstudyDonation = 0;
-    let totalukraineDonation = 0;
+    let totalUkraineDonation = 0;
     
     const today = new Date().setHours(0, 0, 0, 0);
     for (let i = 0; i < users.length; i++) {
@@ -67,8 +67,8 @@ const Dashboard = () => {
       }
       if(users[i].category == "education"){
         totalstudyDonation += users[i].amount
-      }else if(users[i].category == "ukrain donation"){
-        totalukraineDonation += users[i].amount
+      }else if(users[i].category == "Ukrainedonation"){
+        totalUkraineDonation += users[i].amount
       
       }
     }
@@ -76,7 +76,7 @@ const Dashboard = () => {
     setTotalamount(price);
     setTodayDonation(totalTodayDonation);
     setStudyDonation(totalstudyDonation)
-    setUkrainedonation(totalukraineDonation)
+    setUkrainedonation(totalUkraineDonation)
   }, [users]);
 
   useEffect(()=>{
@@ -93,7 +93,7 @@ const Dashboard = () => {
   },[users])
 
   const studypercentData = ((studyDonation / totalamount) * 100).toFixed();
-  const ukrainpercentData = ((ukrainedonation/totalamount)*100).toFixed();
+  const ukrainpercentData = ((Ukrainedonation/totalamount)*100).toFixed();
 
 
 
@@ -163,7 +163,7 @@ const Dashboard = () => {
               </Flex>
               <Flex mt="10px" alignItems="center">
                 <Heading as="h2" size="lg">
-                  ${totalamount}
+                  ₹{totalamount}
                 </Heading>
                 <Text ml="8px" mt="6px" fontSize="13px" fontWeight="thin">
                   Updated 1day ago
@@ -178,7 +178,7 @@ const Dashboard = () => {
               </Flex>
               <Flex mt="10px" alignItems="center">
                 <Heading as="h2" size="lg">
-                  ${todayDonation}
+                 ₹{todayDonation}
                 </Heading>
                 <Text ml="8px" mt="6px" fontSize="13px" fontWeight="thin">
                   Updated 30min ago
@@ -254,7 +254,7 @@ const Dashboard = () => {
                   </WrapItem>
                   <Box ml="10px">
                     <Text fontWeight="500">Help Them Smile Again</Text>
-                    <Text>Ukraine Funds</Text>
+                    <Text>India Funds</Text>
                   </Box>
                 </Flex>
               </Box>
@@ -270,9 +270,9 @@ const Dashboard = () => {
 
               <Box>
                 <Heading as="h2" size="sm" m="10px 10px">
-                    ${`${ukrainedonation}`}
+                    ₹{`${Ukrainedonation}`}
                   <span style={{ color: 'gray', fontWeight: '100' }}>
-                    /${`${totalamount}`}
+                    /₹{`${totalamount}`}
                   </span>{' '}
                 </Heading>
               </Box>
@@ -305,9 +305,9 @@ const Dashboard = () => {
 
               <Box>
                 <Heading as="h2" size="sm" m="10px 10px">
-                ${`${studyDonation}`}
+                ₹{`${studyDonation}`}
                   <span style={{ color: 'gray', fontWeight: '100' }}>
-                  /${`${totalamount}`}
+                  /₹{`${totalamount}`}
                   </span>{' '}
                 </Heading>
               </Box>
@@ -338,7 +338,7 @@ const Dashboard = () => {
                   <Th textAlign={'center'}>Name</Th>
                   <Th textAlign={'center'}>Location</Th>
                   <Th textAlign={'center'}>Category</Th>
-                  <Th textAlign={'center'}>Date</Th>
+                  {/* <Th textAlign={'center'}>Date</Th> */}
                   <Th textAlign={'center'}>Amount</Th>
                 </Tr>
               </Thead>
@@ -353,8 +353,8 @@ const Dashboard = () => {
                         <Td textAlign={'center'}>{el.name}</Td>
                         <Td textAlign={'center'}>{el.country}</Td>
                         <Td textAlign={'center'}>{el.category}</Td>
-                        <Td textAlign={'center'}>{dates}</Td>
-                        <Td textAlign={'center'}>${el.amount}</Td>
+                        {/* <Td textAlign={'center'}>{dates}</Td> */}
+                        <Td textAlign={'center'}>₹{el.amount}</Td>
                       </Tr>
                     );
                   })
@@ -368,7 +368,7 @@ const Dashboard = () => {
                         <Td textAlign={'center'}>{el.country}</Td>
                         <Td textAlign={'center'}>{el.category}</Td>
                         {/* <Td textAlign={'center'}>{dates}</Td> */}
-                        <Td textAlign={'center'}>${el.amount}</Td>
+                        <Td textAlign={'center'}>₹{el.amount}</Td>
                       </Tr>
                     );
                   })

@@ -90,7 +90,7 @@ const Modals = () => {
               <option value="health">Health</option>
               <option value="education">Education</option>
               <option value="food">Food</option>
-              <option value="ukrain donation">Ukrain Donation</option>
+              <option value="Ukrainedonation">IndiaDonation</option>
             </Select>
           </FormControl>
         </ModalBody>

@@ -156,7 +156,7 @@ export default function Payment() {
                     <Flex justifyContent={'space-around'}>
                       <Box>
                         <Text color="blue.600" fontWeight={600} fontSize="2xl">
-                          $ {donatedExtractedData?.amount}
+                          ₹ {donatedExtractedData?.amount}
                         </Text>
                         <Text fontSize={'15px'} fontWeight={600} color={'#9E9E9E'}>
                           amount

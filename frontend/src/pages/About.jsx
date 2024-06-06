@@ -19,7 +19,7 @@ function About() {
                         <div>
                             <h1>APPLICATION FOR HELP</h1>
                             <p>
-                                We know exactly what volunteers, foundations and Ukrainian children need. We accept applications through our e-platform.
+                                We know exactly what volunteers, foundations and Indian children need. We accept applications through our e-platform.
                             </p>
                         </div>
                     </div>
@@ -35,9 +35,9 @@ function About() {
                     <div className='aboutOpt'>
                         <img src="https://www.charityhero.live/static/media/HUM.61358259c11722ff567c28b5d76768a9.svg" alt="" />
                         <div>
-                            <h1>SUPPORT OF UKRAINIAN ECONOMY</h1>
+                            <h1>SUPPORT OF Indian ECONOMY</h1>
                             <p>
-                                Firstly, we buy goods from Ukrainian companies and brands. Only if something is not available in Ukraine, we start looking for it abroad.
+                                Firstly, we buy goods from Indian companies and brands. Only if something is not available in India, we start looking for it abroad.
                             </p>
                         </div>
                     </div>
@@ -78,9 +78,9 @@ function About() {
                     </div>
                 </div>
                 <div className='worksContainer'>
-                    <h1 >WE PURCHASE IN UKRAINE</h1>
+                    <h1 >WE PURCHASE IN INDIA</h1>
                     <div className='worksOpt'>
-                        <p>We purchase humanitarian aid with funds raised in Ukrainian retail chains. Funds raised under special rehabilitation programs for affected or cultural projects with relevant organizations are transferred directly to the partner funds responsible for project implementation.</p>
+                        <p>We purchase humanitarian aid with funds raised in Indian retail chains. Funds raised under special rehabilitation programs for affected or cultural projects with relevant organizations are transferred directly to the partner funds responsible for project implementation.</p>
                         <div className='yellowNum'>
                             3
                         </div>

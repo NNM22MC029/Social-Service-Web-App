@@ -8,7 +8,7 @@ import { Box, Image, Heading, Text, Button } from "@chakra-ui/react";
 import health from "../Assets/health.avif"
 import education from "../Assets/education.avif"
 import food from "../Assets/food.avif"
-import ukraineDonate from "../Assets/ukraineDonation.avif"
+import UkraineDonate from "../Assets/ukraineDonation.avif"
 
 function OrganizationCard({ data }) {
     const dispatch = useDispatch();
@@ -54,7 +54,7 @@ function OrganizationCard({ data }) {
         <DIV>
             <div className='info-container'>
                 <Box maxWidth="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
-                    {data.category === 'food' ? <Image src={food} alt="Fissure in Sandstone" /> : data.category === 'health' ? <Image src={health} alt="Fissure in Sandstone" /> : data.category === 'education' ? <Image src={education} alt="Fissure in Sandstone" /> : <Image src={ukraineDonate} alt="Fissure in Sandstone" />}
+                    {data.category === 'food' ? <Image src={food} alt="Fissure in Sandstone" /> : data.category === 'health' ? <Image src={health} alt="Fissure in Sandstone" /> : data.category === 'education' ? <Image src={education} alt="Fissure in Sandstone" /> : <Image src={UkraineDonate} alt="Fissure in Sandstone" />}
                     <Box p="2">
                         <Heading as="h5" size="md">
                             {data.name}

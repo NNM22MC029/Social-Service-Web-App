@@ -18,17 +18,17 @@ function Footer() {
           <p>Contact us</p>
         </div>
       </div>
-      <h1 className='footer-text'>HELP UKRAINE WITHSTAND!</h1>
+      <h1 className='footer-text'>HELP NOG's WITHSTAND!</h1>
       <div className='last-footer'>
-        <p>DESIGNED BY DENIELS BERZINSH 2022</p>
-          <div>
+        <p>DESIGNED BY IHSAN 2024</p>
+          {/* <div>
         <div className='download-sec'>
           
           <img src="https://www.charityhero.live/static/media/AppStoreW.632c2c31011817d3a77f5d56ad40ab94.svg" alt="" />
           <img src="https://www.charityhero.live/static/media/GoogleStoreW.5fd1156c8537025f122dc605d0f0e481.svg" alt="" />
-          </div>
-          <h1>DOWNLOAD APP</h1>
-          </div>
+          </div> */}
+          {/* <h1>DOWNLOAD APP</h1> */}
+          {/* </div> */}
       </div>
 
     </DIV>

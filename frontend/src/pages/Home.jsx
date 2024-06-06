@@ -29,7 +29,7 @@ function Home() {
       <Box bgImage={background} bgSize={'contain'} backgroundRepeat={"repeat-x"}>
         <div className='heading1'>
           <h1>HELP</h1>
-          <h1>UKRAINE</h1>
+          <h1>NGO's</h1>
           <h1>WITHSTAND</h1>
         </div>
         <div className='donateBtn' >

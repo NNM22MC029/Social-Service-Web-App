@@ -15,7 +15,7 @@ const Fundraise = () => {
   const [studyDonation, setStudyDonation] = useState(0)
   const [healthdonation, setHealthdonation] = useState(0)
   const [fooddonation, setFooddonation] = useState(0)
-  const [ukrainedonation, setUkrainedonation] = useState(0)
+  const [Ukrainedonation, setUkrainedonation] = useState(0)
 
   useEffect(() => {
     dispatch(getdonations());
@@ -25,7 +25,7 @@ const Fundraise = () => {
     let totalstudyDonation = 0;
     let totalhealthDonation = 0;
     let totalfoodDonation = 0;
-    let totalukraineDonation = 0;
+    let totalUkraineDonation = 0;
     for (let i = 0; i < users.length; i++) {
       if (users[i].category == "education") {
         totalstudyDonation += users[i].amount
@@ -33,15 +33,15 @@ const Fundraise = () => {
         totalhealthDonation += users[i].amount
       } else if (users[i].category == "food") {
         totalfoodDonation += users[i].amount
-      } else if (users[i].category == "ukrain donation") {
-        totalukraineDonation += users[i].amount
-        // console.log(totalukraineDonation)
+      } else if (users[i].category == "Ukrainedonation") {
+        totalUkraineDonation += users[i].amount
+        // console.log(totalUkraineDonation)
       }
     }
     setStudyDonation(totalstudyDonation)
     setHealthdonation(totalhealthDonation)
     setFooddonation(totalfoodDonation)
-    setUkrainedonation(totalukraineDonation)
+    setUkrainedonation(totalUkraineDonation)
   }, [users]);
 
 
@@ -79,7 +79,7 @@ const Fundraise = () => {
               </Flex>
               <Flex mt="10px" alignItems="center">
                 <Heading as="h2" size="lg">
-                  ${studyDonation}
+                  ₹{studyDonation}
                 </Heading>
 
               </Flex>
@@ -92,7 +92,7 @@ const Fundraise = () => {
               </Flex>
               <Flex mt="10px" alignItems="center">
                 <Heading as="h2" size="lg">
-                  ${healthdonation}
+                  ₹{healthdonation}
                 </Heading>
 
               </Flex>
@@ -105,7 +105,7 @@ const Fundraise = () => {
               </Flex>
               <Flex mt="10px" alignItems="center">
                 <Heading as="h2" size="lg">
-                  ${fooddonation}
+                  ₹{fooddonation}
                 </Heading>
                 <Text ml="8px" mt="6px" fontSize="13px" fontWeight="thin">
                   Updated 1day ago
@@ -118,12 +118,12 @@ const Fundraise = () => {
 
           <Box cursor={"pointer"} mt="30px" w="30%" p="30px" bg="rgb(255,210,73)" borderRadius="10px">
             <Flex justifyContent="space-between">
-              <Text>Total Ukraine Donation</Text>
+              <Text>Total India's Donation</Text>
               <Text fontWeight="1000">...</Text>
             </Flex>
             <Flex mt="10px" alignItems="center">
               <Heading as="h2" size="lg">
-                ${ukrainedonation}
+                ₹{Ukrainedonation}
               </Heading>
             </Flex>
           </Box>
