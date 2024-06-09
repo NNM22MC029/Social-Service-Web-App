@@ -53,7 +53,7 @@ function About() {
                     <div className='donateBtn' onClick={() => navigate('/donation')}>DONATE</div>
 
                 </div>
-                <img className='flagImg' src={flag} alt="" />
+                {/* <img className='flagImg' src={flag} alt="" /> */}
 
             </div>
             <div>

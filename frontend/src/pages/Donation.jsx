@@ -120,15 +120,15 @@ const Donation = () => {
                         <Heading m={'10px 0'} color={{base : 'blue.500', sm : 'blue.500', md : 'blue.500', lg : 'white', xl : 'white', '2xl' : 'white'}} fontWeight={'bold'} fontSize={{base : '25px', sm : '25px', md : '25px', lg : '50px', xl : '50px', '2xl' : '50px'}}>DONATE TODAY</Heading>
                     </Box>
                     <div className='donation-container'>
-                        <button onClick={() => handleAmountClick(5)}>5 USD</button>
-                        <button onClick={() => handleAmountClick(25)}>25 USD</button>
-                        <button onClick={() => handleAmountClick(50)}>50 USD</button>
+                        <button onClick={() => handleAmountClick(5)}>5 INR</button>
+                        <button onClick={() => handleAmountClick(25)}>25 INR</button>
+                        <button onClick={() => handleAmountClick(50)}>50 INR</button>
                         {showMore && (
                             <>
-                                <button onClick={() => handleAmountClick(100)}>100 USD</button>
-                                <button onClick={() => handleAmountClick(200)}>200 USD</button>
-                                <button onClick={() => handleAmountClick(500)}>500 USD</button>
-                                <button onClick={() => handleAmountClick(1000)}>1000 USD</button>
+                                <button onClick={() => handleAmountClick(100)}>100 INR</button>
+                                <button onClick={() => handleAmountClick(200)}>200 INR</button>
+                                <button onClick={() => handleAmountClick(500)}>500 INR</button>
+                                <button onClick={() => handleAmountClick(1000)}>1000 INR</button>
                             </>
                         )}
                         <Box _hover={{ textDecor: 'underline' }} cursor={'pointer'} className='load-more' onClick={() => setShowMore(!showMore)}>

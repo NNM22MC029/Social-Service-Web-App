@@ -118,7 +118,7 @@ const Fundraise = () => {
 
           <Box cursor={"pointer"} mt="30px" w="30%" p="30px" bg="rgb(255,210,73)" borderRadius="10px">
             <Flex justifyContent="space-between">
-              <Text>Total India's Donation</Text>
+              <Text>Other donations for Indian's</Text>
               <Text fontWeight="1000">...</Text>
             </Flex>
             <Flex mt="10px" alignItems="center">

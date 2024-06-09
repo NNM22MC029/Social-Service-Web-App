@@ -18,7 +18,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { adminLogin } from '../../redux/AdminReducer/action';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
-import flaglady from '../../Assets/admins/flaglady.avif';
+import bgImg from '../../Assets/admins/donation.jpg';
 import Navbar2 from '../../components/Navbar2';
 
 
@@ -80,7 +80,7 @@ export default function AdminLogin() {
       <Box
         position={'relative'}
         style={{
-          backgroundImage: `url(${flaglady})`,
+          backgroundImage: `url(${bgImg})`,
           backgroundSize: 'cover',
         }}
       ></Box>
@@ -96,8 +96,7 @@ export default function AdminLogin() {
       >
         <Flex
           style={{
-            backgroundImage: `url(${flaglady})`,
-           
+            backgroundImage: `url(${bgImg})`,
             backgroundSize: 'cover',
           }}
           minH={'100vh'}
@@ -108,9 +107,9 @@ export default function AdminLogin() {
          
 
           <Stack  spacing={8} mx={'auto'} w="35%" py={12} px={6}>
-            <Stack align={'center'}>
-              <Heading fontSize={'4xl'}>Login to your account!</Heading>
-            </Stack>
+            {/* <Stack align={'center'}>
+              <Heading fontSize={'4xl'} textColor={'blue.900'}>Login to your account!</Heading>
+            </Stack> */}
             <Box
               
               bg={useColorModeValue('white', 'gray.700')}
@@ -118,7 +117,7 @@ export default function AdminLogin() {
               p={8}
             >
               <Stack spacing={8} >
-              
+              <Heading fontSize={'4xl'} textColor={'blue.900'}>Login to your account!</Heading>
                 <FormControl id="email">
                   <FormLabel>Email address</FormLabel>
                   <Input

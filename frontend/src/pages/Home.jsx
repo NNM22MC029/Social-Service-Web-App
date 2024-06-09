@@ -36,10 +36,10 @@ function Home() {
           <button onClick={handleDonateClick}>DONATE</button>
         </div>
         <div>
-          <div className='applink'>
+          {/* <div className='applink'>
             <img src="https://www.charityhero.live/static/media/BAppStor.644ce6de09f0144c5967424bd9b6f27c.svg" alt="" />
             <img src="https://www.charityhero.live/static/media/BGStor.db895fe2f79e4f4272fb1a3bcb554c67.svg" alt="" />
-          </div>
+          </div> */}
         </div>
 
         <About />

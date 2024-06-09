@@ -35,7 +35,7 @@ import { adminLogout, searchDonors } from '../redux/AdminReducer/action';
 const LinkItems = [
     { name: 'Dashboard', icon: FiHome, to: '/dashboard' },
     { name: 'Users', icon: FiUser, to: '/adusers' },
-    { name: 'Admins', icon: FiUser, to: '/admins' },
+    // { name: 'Admins', icon: FiUser, to: '/admins' },
     { name: 'Organizations', icon: VscOrganization, to: '/org' },
     { name: 'Fundrasing', icon: FiTrendingUp, to: '/funds' },
     { name: 'Events', icon: FiCalendar, to: '/events' }

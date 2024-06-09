@@ -47,13 +47,13 @@ const AdminUsers = () => {
     handleDelete(id);
   };
 
-  // const handleBlockUser = (email) => {
-  //   dispatch(blockUser({email:email}))
-  // }
+  const handleBlockUser = (email) => {
+    dispatch(blockUser({email:email}))
+  }
 
-  // const handleUnblock = (email) => {
-  //  dispatch(unBlockUser({email:email}))
-  // }
+  const handleUnblock = (email) => {
+   dispatch(unBlockUser({email:email}))
+  }
 
   if(isLoading){
     return <Loader/>
@@ -93,7 +93,7 @@ const AdminUsers = () => {
                       <Td textAlign={'center'}>{el.name}</Td>
                       <Td textAlign={'center'}>{el.email}</Td>
                       <Td textAlign={'center'}>{el.mobile}</Td>
-                      {/* <Td textAlign={'center'}> */}
+                      {/* <Td textAlign={'center'}>  */}
                         {/* <Button onClick={()=>handleBlockUser(el.email)}>Block</Button>
                         <Button onClick={()=>handleUnblock(el.email)}>Unblock</Button> */}
 
