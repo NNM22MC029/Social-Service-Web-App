@@ -14,7 +14,7 @@ import { Box } from '@chakra-ui/react';
     <DIV>
 
     <div  style={{ backgroundImage:`url(../Assets/background.png)` }} >
-        <h1 className='heading'>WHAT ULRAINE NEEDS NOW :</h1>
+        <h1 className='heading'>WHAT POOR NEEDS NOW :</h1>
         <img src={helpImage} alt="" />
     </div>
     

@@ -63,12 +63,12 @@ const LoginPage = () => {
 
       <div className='signup-page'>
         <div className='signup-detail'>
-          <h1>Give Your life to charity<br /> <span>Dash <span>Donation</span></span></h1>
+          <h1>Give Your life to charity<br /></h1>
           <img width={"100%"} src="https://media.istockphoto.com/id/1353332258/photo/donation-concept-the-volunteer-giving-a-donate-box-to-the-recipient-standing-against-the-wall.webp?b=1&s=170667a&w=0&k=20&c=D53dy4HPlfLi9yCO8ouowIn9HqIWfkjEx4-C05B8TYU=" alt="" />
 
         </div>
         <form onSubmit={handleLogin} className='signup'>
-          <h1>DASH<span>DONATION</span>  <span> Login</span></h1>
+          <h1><span>DONATION</span>  <span> Login</span></h1>
 
           <br />
           <label >Email</label>

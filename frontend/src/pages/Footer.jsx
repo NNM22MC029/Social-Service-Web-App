@@ -18,7 +18,7 @@ function Footer() {
           <p>Contact us</p>
         </div>
       </div>
-      <h1 className='footer-text'>HELP NOG's WITHSTAND!</h1>
+      <h1 className='footer-text'>HELP HOPE FOUNDATION WITHSTAND!</h1>
       <div className='last-footer'>
         <p>DESIGNED BY IHSAN 2024</p>
           {/* <div>

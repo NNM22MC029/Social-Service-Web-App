@@ -35,7 +35,7 @@ function About() {
                     <div className='aboutOpt'>
                         <img src="https://www.charityhero.live/static/media/HUM.61358259c11722ff567c28b5d76768a9.svg" alt="" />
                         <div>
-                            <h1>SUPPORT OF Indian ECONOMY</h1>
+                            <h1>SUPPORT OF INDIAN ECONOMY</h1>
                             <p>
                                 Firstly, we buy goods from Indian companies and brands. Only if something is not available in India, we start looking for it abroad.
                             </p>

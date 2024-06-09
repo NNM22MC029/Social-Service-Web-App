@@ -90,7 +90,7 @@ export const adminLogin = payload => dispatch => {
       dispatch({ type: ADMIN_LOGIN_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      console.log(err.response.data.msg)
+      // console.log(err.response.data.msg)
       dispatch({ type: ADMIN_FAILURE_ACTION , payload: err.response.data.msg });
     });
 };
