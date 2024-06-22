@@ -81,7 +81,7 @@ export const getOrganizations = () => dispatch => {
     });
 };
 
-export const adminLogin = payload => dispatch => {
+export const adminLoginn = payload => dispatch => {
   dispatch({ type: ADMIN_REQUEST_ACTION });
   axios
     .post(`${baseUrl}/admin/login`, payload)

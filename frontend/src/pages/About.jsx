@@ -10,7 +10,7 @@ function About() {
         <DIV>
 
 
-            <h1 className='headingAbout'>WHY CHARITY HERO?</h1>
+            <h1 className='headingAbout'>WHY OUR CHARITY?</h1>
 
             <div className='aboutSec'>
                 <div>
@@ -57,7 +57,7 @@ function About() {
 
             </div>
             <div>
-                <h1 className='worksHeadin'>HOW CHARITY HERO WORKS</h1>
+                <h1 className='worksHeadin'>HOW CHARITY WORKS</h1>
                 <h3 className='colorheading'>JUST FOUR SIMPLE STEPS</h3>
                 <div className='worksContainer'>
                     <h1 >COLLECTION OF NEEDS</h1>
@@ -91,7 +91,7 @@ function About() {
                     <div className='worksOpt'>
                         <p>Volunteers receive humanitarian aid from our partners (retail chains, manufacturers).</p>
                         <div className='yellowNum'>
-                            1
+                            4
                         </div>
                     </div>
                 </div>

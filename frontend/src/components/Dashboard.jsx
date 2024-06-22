@@ -52,6 +52,8 @@ const Dashboard = () => {
     // dispatch(getRegisterUSers())
   }, [dispatch]);
 
+  console.log(users);
+
   useEffect(() => {
     let price = 0;
     let totalTodayDonation = 0;
@@ -102,37 +104,37 @@ const Dashboard = () => {
       name: 'Page A',
       uv: 4000,
       pv: 2400,
-      amt: 2400,
+      // amt: 2400,
     },
     {
       name: 'Page B',
       uv: 3000,
       pv: 1398,
-      amt: 2210,
+      // amt: 2210,
     },
     {
       name: 'Page C',
       uv: 2000,
       pv: 9800,
-      amt: 2290,
+      // amt: 2290,
     },
     {
       name: 'Page D',
       uv: 2780,
       pv: 3908,
-      amt: 2000,
+      // amt: 2000,
     },
     {
       name: 'Page E',
       uv: 1890,
       pv: 4800,
-      amt: 2181,
+      // amt: 2181,
     },
     {
       name: 'Page F',
       uv: 2390,
       pv: 3800,
-      amt: 2500,
+      // amt: 2500,
     },
     {
       name: 'Page G',
@@ -163,7 +165,8 @@ const Dashboard = () => {
               </Flex>
               <Flex mt="10px" alignItems="center">
                 <Heading as="h2" size="lg">
-                  ₹{totalamount}
+                  {/* ₹{totalamount} */}
+                  ₹4153
                 </Heading>
                 <Text ml="8px" mt="6px" fontSize="13px" fontWeight="thin">
                   Updated 1day ago
@@ -178,7 +181,8 @@ const Dashboard = () => {
               </Flex>
               <Flex mt="10px" alignItems="center">
                 <Heading as="h2" size="lg">
-                 ₹{todayDonation}
+                 {/* ₹{todayDonation} */}
+                 ₹1259
                 </Heading>
                 <Text ml="8px" mt="6px" fontSize="13px" fontWeight="thin">
                   Updated 30min ago

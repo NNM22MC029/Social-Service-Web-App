@@ -43,6 +43,7 @@ const Donation = () => {
         name: '',
         amount: '',
         message: '',
+        category: '',
         country: '',
         date: '',
     });
@@ -84,6 +85,7 @@ const Donation = () => {
         };
 
         dispatch(saveDonation(updatedFormData, data1.token));
+        console.log(data1);
         onClose();
     };
 
@@ -150,7 +152,7 @@ const Donation = () => {
                 <form onSubmit={handleSubmit}>
                     <ModalOverlay />
                     <ModalContent>
-                        <ModalHeader>Create Donation</ModalHeader>
+                        <ModalHeader>Donation</ModalHeader>
                         <ModalCloseButton />
                         <ModalBody pb={6}>
                             {/* Your form fields and inputs */}
@@ -188,6 +190,23 @@ const Donation = () => {
                                     required
                                 />
                             </FormControl>
+
+                            <FormControl mt={4}>
+
+              <FormLabel>Category:</FormLabel>
+              <Select
+                placeholder="Select category"
+                name="category"
+                value={formData.category}
+                onChange={handleChange}
+                required
+              >
+                <option value="health">Health</option>
+                <option value="education">Education</option>
+                <option value="food">Food</option>
+                <option value="indiadonation">India Donation</option>
+              </Select>
+            </FormControl>
 
                             <FormControl mt={4}>
                                 <FormLabel>Country:</FormLabel>
@@ -233,7 +252,11 @@ const Donation = () => {
 
 const DIV = styled.div`
    
-    .donation-container{
+
+
+
+
+.donation-container{
         padding: 50px;
         display: flex;
         flex-direction: column;

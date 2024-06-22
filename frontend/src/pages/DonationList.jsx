@@ -139,7 +139,7 @@ const DonationList = () => {
             <div key={donation.userId} style={donationItemStyle}>
               <div>
                 <h2 style={headingStyle}>{donation.name}</h2>
-                <p style={detailStyle}>Amount: ${donation.amount}</p>
+                <p style={detailStyle}>Amount: ₹{donation.amount}</p>
                 <p style={detailStyle}>Message: {donation.message}</p>
                 <p style={detailStyle}>Category: {donation.category}</p>
               </div>

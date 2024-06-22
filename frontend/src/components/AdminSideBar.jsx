@@ -36,7 +36,7 @@ const LinkItems = [
     { name: 'Dashboard', icon: FiHome, to: '/dashboard' },
     { name: 'Users', icon: FiUser, to: '/adusers' },
     // { name: 'Admins', icon: FiUser, to: '/admins' },
-    { name: 'Organizations', icon: VscOrganization, to: '/org' },
+    { name: 'List Donors', icon: VscOrganization, to: '/org' },
     { name: 'Fundrasing', icon: FiTrendingUp, to: '/funds' },
     { name: 'Events', icon: FiCalendar, to: '/events' }
     // { name: 'Campaigns', icon: FiCompass, href: '/campaigns' }

@@ -16,7 +16,7 @@ import {
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { adminLogin } from '../../redux/AdminReducer/action';
+import { adminLogin, adminLoginn } from '../../redux/AdminReducer/action';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import bgImg from '../../Assets/admins/donation.jpg';
 import Navbar2 from '../../components/Navbar2';
@@ -40,7 +40,7 @@ export default function AdminLogin() {
       email,
       password,
     };
-    dispatch(adminLogin(userDetails));
+    dispatch(adminLoginn(userDetails));
   };
 
   useEffect(() => {

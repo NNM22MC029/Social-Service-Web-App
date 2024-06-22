@@ -55,7 +55,7 @@ function DonationModal() {
       >
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Create Donation</ModalHeader>
+          <ModalHeader>Donate</ModalHeader>
           <ModalCloseButton />
 
           <ModalBody pb={6}>
@@ -93,7 +93,7 @@ function DonationModal() {
                 required
               />
             </FormControl>
-
+            
             <FormControl mt={4}>
               <FormLabel>Category:</FormLabel>
               <Select
@@ -106,7 +106,7 @@ function DonationModal() {
                 <option value="health">Health</option>
                 <option value="education">Education</option>
                 <option value="food">Food</option>
-                <option value="Ukrainedonation">UkraineDonation</option>
+                <option value="indiadonation">India Donation</option>
               </Select>
             </FormControl>
 

@@ -4,6 +4,8 @@ require('dotenv').config();
 
 const auth = async(req, res, next) => {
     const token = req.headers.authorization?.split(' ')[1];
+    // const token = req.headers["authorization"];
+    // console.log(token);
 
     if(token === undefined){
         return res.status(400).send({'msg' : 'Token not found'});
