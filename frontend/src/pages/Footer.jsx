@@ -7,7 +7,7 @@ function Footer() {
     <DIV>
       <div className='firstSection'>
         <img className='mainLogo' src={DASHDONATION} alt="" />
-        <div >
+        {/* <div >
           <p>About</p>
           <p>
             Help
@@ -16,7 +16,7 @@ function Footer() {
             Partners
           </p>
           <p>Contact us</p>
-        </div>
+        </div> */}
       </div>
       <h1 className='footer-text'>HELP HOPE FOUNDATION WITHSTAND!</h1>
       <div className='last-footer'>

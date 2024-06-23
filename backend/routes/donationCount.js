@@ -13,32 +13,56 @@ router.get("/count", async (req, res) => {
               $match: { category: "health" },
             },
             {
-              $count: "count",
+              $group: {
+                _id:null,
+                count: {$sum: "$amount"}
+              }
             },
+            {
+              $project: {_id: 0}
+            }
           ],
           educationCount: [
             {
               $match: { category: "education" },
             },
             {
-              $count: "count",
+              $group: {
+                _id: null,
+                count: { $sum: "$amount" } 
+              }
             },
+            {
+              $project: {_id: 0}
+            }
           ],
           foodCount: [
             {
               $match: { category: "food" },
             },
             {
-              $count: "count",
+              $group: {
+                _id:null,
+                count: {$sum: "$amount"}
+              }
             },
+            {
+              $project: {_id: 0}
+            }
           ],
           indiaDonation: [
             {
               $match: { category: "indiadonation" },
             },
             {
-              $count: "count",
+              $group: {
+                _id:null,
+                count: {$sum: "$amount"}
+              }
             },
+            {
+              $project: {_id: 0}
+            }
           ],
         },
       },

@@ -9,46 +9,55 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import {
-  
-    IconButton,
-    HStack,
-    Avatar,
-    VStack,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuDivider,
-    MenuList,
-    
-  } from '@chakra-ui/react';
-  import { FiMenu, FiBell, FiChevronDown, FiUser, FiSearch, FiCalendar } from 'react-icons/fi';
-import { FiHome, FiTrendingUp, FiCompass, FiStar, FiSettings } from 'react-icons/fi';
+  IconButton,
+  HStack,
+  Avatar,
+  VStack,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuDivider,
+  MenuList,
+} from '@chakra-ui/react';
+import {
+  FiMenu,
+  FiBell,
+  FiChevronDown,
+  FiUser,
+  FiSearch,
+  FiCalendar,
+} from 'react-icons/fi';
+import {
+  FiHome,
+  FiTrendingUp,
+  FiCompass,
+  FiStar,
+  FiSettings,
+} from 'react-icons/fi';
 import { VscOrganization } from 'react-icons/vsc';
 import { IconType } from 'react-icons';
 
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { adminLogout, searchDonors } from '../redux/AdminReducer/action';
 
-
-
 const LinkItems = [
-    { name: 'Dashboard', icon: FiHome, to: '/dashboard' },
-    { name: 'Users', icon: FiUser, to: '/adusers' },
-    // { name: 'Admins', icon: FiUser, to: '/admins' },
-    { name: 'List Donors', icon: VscOrganization, to: '/org' },
-    { name: 'Fundrasing', icon: FiTrendingUp, to: '/funds' },
-    { name: 'Events', icon: FiCalendar, to: '/events' }
-    // { name: 'Campaigns', icon: FiCompass, href: '/campaigns' }
-  ];
-  
+  { name: 'Dashboard', icon: FiHome, to: '/dashboard' },
+  { name: 'Users', icon: FiUser, to: '/adusers' },
+  // { name: 'Admins', icon: FiUser, to: '/admins' },
+  { name: 'List Donors', icon: VscOrganization, to: '/org' },
+  { name: 'Fundrasing', icon: FiTrendingUp, to: '/funds' },
+  { name: 'Events', icon: FiCalendar, to: '/events' },
+  // { name: 'Campaigns', icon: FiCompass, href: '/campaigns' }
+];
+
 const AdminSidebar = () => {
   return (
     <Box
       transition="3s ease"
-    //   bg={useColorModeValue('white', 'gray.900')}
-    bg={useColorModeValue('#0158B8', 'gray.900')}
-    color="white"
+      //   bg={useColorModeValue('white', 'gray.900')}
+      bg={useColorModeValue('#0158B8', 'gray.900')}
+      color="white"
       borderRight="1px"
       borderRightColor={useColorModeValue('gray.200', 'gray.700')}
       w={{ base: 'full', md: 60 }}
@@ -56,11 +65,16 @@ const AdminSidebar = () => {
       h="full"
     >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" color={"#FFD249"} fontFamily="monospace" fontWeight="bold">
-        DashDonation
+        <Text
+          fontSize="2xl"
+          color={'#FFD249'}
+          fontFamily="monospace"
+          fontWeight="bold"
+        >
+          DashDonation
         </Text>
       </Flex>
-      {LinkItems.map((link) => (
+      {LinkItems.map(link => (
         <NavItem key={link.name} to={link.to} icon={link.icon}>
           {link.name}
         </NavItem>
@@ -69,10 +83,20 @@ const AdminSidebar = () => {
   );
 };
 
-
-const NavItem = ({to, icon, children }: { icon: IconType; children: React.ReactNode }) => {
+const NavItem = ({
+  to,
+  icon,
+  children,
+}: {
+  icon: IconType,
+  children: React.ReactNode,
+}) => {
   return (
-    <Link to={to} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link
+      to={to}
+      style={{ textDecoration: 'none' }}
+      _focus={{ boxShadow: 'none' }}
+    >
       <Flex
         align="center"
         p="4"
@@ -81,11 +105,11 @@ const NavItem = ({to, icon, children }: { icon: IconType; children: React.ReactN
         role="group"
         cursor="pointer"
         _hover={{
-            //   bg: 'cyan.400',
-            bg: 'rgb(232, 204, 25)',
-  
-            color: 'white',
-          }}
+          //   bg: 'cyan.400',
+          bg: 'rgb(232, 204, 25)',
+
+          color: 'white',
+        }}
       >
         {icon && (
           <Icon
@@ -104,39 +128,34 @@ const NavItem = ({to, icon, children }: { icon: IconType; children: React.ReactN
   );
 };
 
-
 export const MobileNav = ({ onOpen }: { onOpen: () => void }) => {
   const [status, setStatus] = useState(false);
 
-    const dispatch = useDispatch();
-    const { searchusers, qval } = useSelector(store => store.adminReducer);
-    
-    const admintokenData = JSON.parse(localStorage.getItem("ad-token")) || {}
-  
-  
-    const handleSearch = val => {
-      dispatch(searchDonors(val));
-    };
-  
-  
-  
-    const handleDebounce = val => {
-      if (id) clearTimeout(id);
-      var id = setTimeout(() => {
-        handleSearch(val);
-      }, 1000);
-    };
-  
-  
-    const handleLogout = () => {
-      localStorage.removeItem("ad-token")
-      dispatch(adminLogout())
-      window.location.reload()
-    }
-    return (
-        <>
-        {/* <Layout/> */}
-        <Flex
+  const dispatch = useDispatch();
+  const { searchusers, qval } = useSelector(store => store.adminReducer);
+
+  const admintokenData = JSON.parse(localStorage.getItem('ad-token')) || {};
+
+  const handleSearch = val => {
+    dispatch(searchDonors(val));
+  };
+
+  const handleDebounce = val => {
+    if (id) clearTimeout(id);
+    var id = setTimeout(() => {
+      handleSearch(val);
+    }, 1000);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('ad-token');
+    dispatch(adminLogout());
+    window.location.reload();
+  };
+  return (
+    <>
+      {/* <Layout/> */}
+      <Flex
         px={{ base: 4, md: 4 }}
         height="20"
         alignItems="center"
@@ -144,26 +163,26 @@ export const MobileNav = ({ onOpen }: { onOpen: () => void }) => {
         borderBottomWidth="1px"
         borderBottomColor={useColorModeValue('gray.200', 'gray.700')}
         justifyContent={{ base: 'space-between', md: 'flex-end' }}
-        >
+      >
         <IconButton
           display={{ base: 'flex', md: 'none' }}
           onClick={onOpen}
           variant="outline"
           aria-label="open menu"
           icon={<FiMenu />}
-          />
-  
+        />
+
         <Text
           display={{ base: 'flex', md: 'none' }}
           fontSize="2xl"
           fontFamily="monospace"
           fontWeight="bold"
-          >
+        >
           Logo
         </Text>
-  
+
         <HStack spacing={{ base: '0', md: '6' }}>
-           {/* <IconButton
+          {/* <IconButton
         onClick={()=>setStatus(true)}
           size="lg"
           variant="ghost"
@@ -179,7 +198,7 @@ export const MobileNav = ({ onOpen }: { onOpen: () => void }) => {
           ) : (
             ''
           )}
-          {status ? (
+          {/* {status ? (
             <CloseButton
               onClick={() => {
                 setStatus(false);
@@ -187,20 +206,20 @@ export const MobileNav = ({ onOpen }: { onOpen: () => void }) => {
             />
           ) : (
             <FiSearch cursor={'pointer'} onClick={() => setStatus(true)} />
-          )}
-          <IconButton
+          )} */}
+          {/* <IconButton
             size="lg"
             variant="ghost"
             aria-label="open menu"
             icon={<FiBell />}
-            />
+          /> */}
           <Flex alignItems="center">
             <Menu>
               <MenuButton
                 py={2}
                 transition="all 0.3s"
                 _focus={{ boxShadow: 'none' }}
-                >
+              >
                 <HStack>
                   {/* <Avatar
                     size="sm"
@@ -211,10 +230,12 @@ export const MobileNav = ({ onOpen }: { onOpen: () => void }) => {
                     alignItems="flex-start"
                     spacing="1px"
                     ml="2"
-                    >
-                    {
-                     admintokenData.token ? <Text fontSize="sm">{admintokenData.loggedInuser}</Text> : <Text>Admin User</Text>
-                   } 
+                  >
+                    {admintokenData.token ? (
+                      <Text fontSize="sm">{admintokenData.loggedInuser}</Text>
+                    ) : (
+                      <Text>Admin User</Text>
+                    )}
                     <Text fontSize="xs" color="gray.600">
                       Admin
                     </Text>
@@ -238,9 +259,8 @@ export const MobileNav = ({ onOpen }: { onOpen: () => void }) => {
           </Flex>
         </HStack>
       </Flex>
-      </>
-    );
-  };
-  
+    </>
+  );
+};
 
-  export default AdminSidebar;
+export default AdminSidebar;

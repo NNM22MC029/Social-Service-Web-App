@@ -99,7 +99,7 @@ const Fundraise = () => {
               </Flex>
               <Flex mt="10px" alignItems="center">
                 <Heading as="h2" size="lg">
-                  {studyDonation}
+                  ₹{studyDonation}
                 </Heading>
               </Flex>
             </Box>
@@ -111,7 +111,7 @@ const Fundraise = () => {
               </Flex>
               <Flex mt="10px" alignItems="center">
                 <Heading as="h2" size="lg">
-                  {healthdonation}
+                  ₹{healthdonation}
                 </Heading>
               </Flex>
             </Box>
@@ -123,7 +123,7 @@ const Fundraise = () => {
               </Flex>
               <Flex mt="10px" alignItems="center">
                 <Heading as="h2" size="lg">
-                  {fooddonation}
+                  ₹{fooddonation}
                 </Heading>
                 {/* <Text ml="8px" mt="6px" fontSize="13px" fontWeight="thin">
                   Updated 1day ago
@@ -146,7 +146,7 @@ const Fundraise = () => {
             </Flex>
             <Flex mt="10px" alignItems="center">
               <Heading as="h2" size="lg">
-                {Ukrainedonation}
+                ₹{Ukrainedonation}
               </Heading>
             </Flex>
           </Box>
