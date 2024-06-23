@@ -13,6 +13,9 @@ const listDonar = require("./routes/listDonars");
 const events = require("./routes/addEvent");
 const dashboard = require("./routes/dashboard");
 const graph = require("./routes/dashboardGraph");
+const contactUs = require("./routes/contactus");
+const createOrder = require("./routes/payments/createOrder");
+const verifyPayment = require("./routes/payments/verifyPayment");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
@@ -25,6 +28,9 @@ app.use("/donar", listDonar);
 app.use("/event", events);
 app.use("/dashboard", dashboard);
 app.use("/dashboard/graph", graph);
+app.use("/contact/admin", contactUs);
+app.use("/payment/pay", createOrder);
+app.use("/payment/verify", verifyPayment);
 
 app.get("/", (req, res) => {
   res.send("Welcome to Home Page");
